@@ -1,26 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <!-- Meta tags requeridos -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- CSS de Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Certificación BV Gblobal</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+</head>
 
-    <title>Plantilla HTML5 + Bootstrap + jQuery</title>
-  </head>
-  <body style="padding-top: 2rem;">
-    <div class="container">
-      <h1>Documento de ejemplo</h1>
-      <p class="lead">Plantilla HTML5 + Bootstrap + jQuery.</p>
-      <a href="phpmyadmin" target="_blank">🐬 Acceso a phpMyAdmin</a>
-    </div>
+<body>
+    <section class="formulario">
+        <section class="informacion_contacto">
+            <section class="titulos">
+                <span class="certificado.png"></span>
+                <h2>OBTENER<br>CERTIFICADO</h2>
+                <h3>Sistema de Certificación - BV Global</h3>
+            </section>
+            <section class="info_items">
+                <p><span class="fa fa-envelope"></span>direccion@certificacioncv.com</p>
+                <p><span class="fa fa-mobile"></span>(55) 8021 - 5093</p>
+            </section>
+        </section>
 
-    <!-- JavaScript opcional -->
-    <!-- Primero jQuery, después Popper.js y por último el JS de Bootstrap -->
+        <form action="insertarDatos.php" method="POST" class="formulario_usuarios">
+            <h2>Captura de datos.</h2>
+            <div class="user_info">
+                <label for="nombre">Nombre(s).*</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <label for="apellido">Apellidos.*</label>
+                <input type="text" id="apellido" name="apellido">
+
+                <label for="curp">CURP. (Solo ciudadanos méxicanos)</label>
+                <input type="text" id="curp" name="curp">
+
+                <label for="curso">Seleccionar curso*</label>
+                <select>
+                    <option value="1">ISO 9001:2015 Sistemas de gestión de la calidad</option>
+                    <option value="2">ISO 14001:2015 Sistemas de gestión ambiental </option>
+                    <option value="3">ISO 45001:2018 Sistemas de gestión de la seguridad y salud en el trabajo </option>
+                    <option value="4">ISO 28000:2007 Sistemas de gestión para la seguridad de la cadena de suministro</option>
+                    <option value="5">ISO 37001:2016 Sistemas de gestión antisoborno</option>
+                    <option value="6">ISO 39001:2012 Sistemas de gestión de la seguridad vial </option>
+                    <option value="7">ISO 31000:2018 Gestión del Riesgo – Directrices</option>
+                    <option value="8">ISO 21001:2018 Sistemas de gestión para organizaciones educativas </option>
+                    <option value="9">ISO 19011:2018 Directrices para la auditoría de los sistemas de gestión</option>
+                </select>
+
+                <label for="email">Correo electronico *</label>
+                <input type="text" id="email" name="email">
+
+                <input type="submit" value="ENVIAR" id="btnSend">
+            </div>
+        </form>
+
+    </section>
+
+    <a href="phpmyadmin" target="_blank">🐬 Acceso a phpMyAdmin</a>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
-</html>
+    <script src="js/script.js"></script>
+</body>
