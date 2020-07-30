@@ -8,6 +8,25 @@
     <title>Certificación BV Gblobal</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <style>
+        input + span {
+            padding-right: 30px;
+        }
+
+        input:invalid+.validez:after {
+            color: red;
+            position: absolute;
+            content: '✖';
+            padding-left: 5px;
+        }
+
+        input:valid+.validez:after {
+            color: green;
+            position: absolute;
+            content: '✔';
+            padding-left: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -29,13 +48,13 @@
             <h2>Captura de datos.</h2>
             <div class="user_info">
                 <label for="nombre">Nombre(s).*</label>
-                <input type="text" id="nombre" name="nombre">
+                <input type="text" id="nombre" name="nombre" maxlength="30" required><span class="validez"></span><br/>
 
                 <label for="apellido">Apellidos.*</label>
-                <input type="text" id="apellido" name="apellido">
+                <input type="text" id="apellido" name="apellido" maxlength="30" required><span class="validez"></span><br/>
 
                 <label for="curp">CURP. (Solo ciudadanos méxicanos)</label>
-                <input type="text" id="curp" name="curp">
+                <input type="text" id="curp" name="curp"><br/>
 
                 <label for="curso">Seleccionar curso*</label>
                 <!-- Se te olvidó poner nombre a este campo de formulario para que llegue al PHP -->
@@ -49,10 +68,10 @@
                     <option value="7">ISO 31000:2018 Gestión del Riesgo – Directrices</option>
                     <option value="8">ISO 21001:2018 Sistemas de gestión para organizaciones educativas </option>
                     <option value="9">ISO 19011:2018 Directrices para la auditoría de los sistemas de gestión</option>
-                </select>
+                </select><br/>
 
                 <label for="email">Correo electronico *</label>
-                <input type="text" id="email" name="email">
+                <input type="text" id="email" name="email" maxlength="30" required><span class="validez"></span><br/>
 
                 <input type="submit" value="ENVIAR" id="btnSend">
             </div>
