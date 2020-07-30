@@ -11,6 +11,7 @@ tasks:
     multitail /var/log/apache2/access.log -I /var/log/apache2/error.log
 - name: Terminal
   init: >
+    mysql < esquema.sql;
     composer install;
     curl 'https://files.phpmyadmin.net/phpMyAdmin/5.0.1/phpMyAdmin-5.0.1-all-languages.zip' > phpMyAdmin-5.0.1-all-languages.zip ;
     unzip phpMyAdmin-5.0.1-all-languages.zip -d public ;
