@@ -3,11 +3,11 @@
     para que falle en caso de no encontrarse */
 require 'conexion.php';
 
-$conn = mysqli_connect($db_host, $db_usuario, $db_password, $db_nombre);
+$conn = @mysqli_connect($db_host, $db_usuario, $db_password, $db_nombre);
 
 /* Hay que comprobar si la conexión se estableció correctamente */
-if ($conn->connect_error !== NULL) {
-    die('Error de Conexión: ' . htmlspecialchars($conn->connect_error));
+if (mysqli_connect_error() !== NULL) {
+    die('Error de Conexión: ' . htmlspecialchars(mysqli_connect_error()));
 }
 
 /* INDISPENSABLE escapar las cadenas con "mysqli_real_escape_string" */
